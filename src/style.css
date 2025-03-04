@@ -118,3 +118,15 @@ main {
 .day {
   color: rgba(255, 213, 0, 1);
 }
+footer {
+  font-size: 14px;
+  font-weight: lighter;
+  margin: 10px;
+  text-align: center;
+}
+footer a {
+  color: yellow;
+}
+a:visited {
+  color: rgba(255, 213, 0, 1);
+}
