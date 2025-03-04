@@ -58,7 +58,53 @@ header {
 }
 
 main {
-  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+}
+.app-title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 0px;
+  padding: 5px 0;
+}
+.current {
+  display: block;
+  margin-top: -25px;
+  font-size: 18px;
+}
+.current-temp {
+  font: 180px;
+  flex: 1;
+  text-align: left;
+}
+.city-info,
+.weather-info {
+  flex: 1;
+  text-align: right;
+}
+
+.five-day-forecast {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px;
+  margin-top: 10px;
+}
+.five-day-forecast div {
+  background: rgba(225, 225, 225, 0.2);
+  padding: 10px;
+  border-radius: 10px;
   flex: 1;
   text-align: center;
+}
+.day {
+  color: rgba(255, 213, 0, 1);
 }
