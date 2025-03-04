@@ -3,51 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
     <title>What's the Weather?</title>
   </head>
   <body>
-    <header>
-      <p class="weather-icon">🌤️</p>
-      <form>
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>What's the Weather?</h1>
-        <p>Tuesday 14:14</p>
-      </div>
-      <div>
-        <h2>Tucson, AZ, USA</h2>
-        <p>
-          <strong>Sunny</strong><br />
-          Humidity: <strong>10%</strong>, Wind: <strong>2mph</strong>
-        </p>
-      </div>
-      <div>
-        <h2>48°C</h2>
-      </div>
-      <div class="five-day-forcast">
-        <div>W ☀️ 25°C</div>
-        <div>Th ☀️ 25°C</div>
-        <div>F ☀️ 25°C</div>
-        <div>S ☀️ 25°C</div>
-        <div>Su ☀️ 25°C</div>
-      </div>
-    </main>
-    <footer>
-      Built by
-      <a href="https://github.com/jpcreativeworks" target="_blank"
-        >Jenn Bencriscutto</a
-      >, code is hosted on
-      <a
-        href="https://github.com/jpcreativeworks/Whats-the-Weather-App.git"
-        target="_blank"
-        >GitHub</a
-      >
-      and website hosted on
-      <a href="https://wtweatherapp.netlify.app/" target="_blank">Netlify</a>.
-    </footer>
+    <div class="weather-app">
+      <header>
+        <p class="weather-icon">🌤️</p>
+        <form class="city-search">
+          <input type="search" placeholder="Enter a city..." required />
+          <input type="submit" value="Search" />
+        </form>
+      </header>
+      <main>
+        <div class="app-title">
+          <h1>What's the Weather?</h1>
+          <p class="current">Tuesday 14:14</p>
+        </div>
+        <div>
+          <h2 class="city-info">Tucson, AZ, USA</h2>
+          <p class="weather-info">
+            <strong>Sunny</strong><br />
+            Humidity: <strong>10%</strong>, Wind: <strong>2mph</strong>
+          </p>
+        </div>
+        <div>
+          <h2 class="current-temp">48°C</h2>
+        </div>
+        <div class="five-day-forcast">
+          <div>W ☀️ 25°C</div>
+          <div>Th ☀️ 25°C</div>
+          <div>F ☀️ 25°C</div>
+          <div>S ☀️ 25°C</div>
+          <div>Su ☀️ 25°C</div>
+        </div>
+      </main>
+      <footer>
+        Built by
+        <a href="https://github.com/jpcreativeworks" target="_blank"
+          >Jenn Bencriscutto</a
+        >, code is hosted on
+        <a
+          href="https://github.com/jpcreativeworks/Whats-the-Weather-App.git"
+          target="_blank"
+          >GitHub</a
+        >
+        and website hosted on
+        <a href="https://wtweatherapp.netlify.app/" target="_blank">Netlify</a>.
+      </footer>
+    </div>
   </body>
 </html>

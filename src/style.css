@@ -1,0 +1,15 @@
+body {
+  background-color: aliceblue;
+  font-family: "Racing Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.weather-app {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 250px 250px 10px 10px;
+}
