@@ -34,20 +34,13 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = `${windSpeedMph} mph`;
   document.querySelector("#description").innerHTML = weatherDescription;
 
-  let iconContainer = document.querySelector("#weather-icon-container");
+  let iconElement = document.querySelector("#weather-icon");
+  let newIconUrl = `https://www.weatherbit.io/static/img/icons/${weatherIconCode}.png`;
 
   if (weatherIconCode) {
-    let oldIcon = document.querySelector(".weather-icon");
-    if (oldIcon) {
-      oldIcon.remove();
-    }
-
-    let iconElement = document.querySelector("#icon");
-    if (weatherIconCode) {
-      iconElement.innerHTML = `<img src="https://www.weatherbit.io/static/img/icons/${weatherIconCode}.png" alt="Weather Icon">`;
-    } else {
-      iconElement.innerHTML = "🌤️";
-    }
+    iconElement.src = newIconUrl;
+  } else {
+    iconElement.src = "https://www.weatherbit.io/static/img/icons/c02d.png";
   }
 }
 
