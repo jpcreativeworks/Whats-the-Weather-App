@@ -119,10 +119,12 @@ function displayForecast(response) {
       console.error(`Missing data for day ${i}`, forecast);
       continue;
     }
+
     let dayIndex = (currentDayIndex + i) % 7;
     let dayName = daysOfWeek[dayIndex];
 
     let iconUrl = `https://www.weatherbit.io/static/img/icons/${forecast.weather.icon}.png`;
+
     let temperature = Math.round(forecast.temp);
 
     let forecastHTML = `
