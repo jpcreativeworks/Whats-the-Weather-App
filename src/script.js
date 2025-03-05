@@ -42,11 +42,12 @@ function displayWeather(response) {
       oldIcon.remove();
     }
 
-    let iconElement = document.createElement("img");
-    iconElement.src = `https://www.weatherbit.io/static/img/icons/${weatherIconCode}.png`;
-    iconElement.alt = weatherDescription;
-    iconElement.classList.add("weather-icon");
-    iconContainer.appendChild(iconElement);
+    let iconElement = document.querySelector("#icon");
+    if (weatherIconCode) {
+      iconElement.innerHTML = `<img src="https://www.weatherbit.io/static/img/icons/${weatherIconCode}.png" alt="Weather Icon">`;
+    } else {
+      iconElement.innerHTML = "🌤️";
+    }
   }
 }
 

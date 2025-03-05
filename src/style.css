@@ -28,14 +28,21 @@ body {
   margin-top: 10px;
 }
 .weather-icon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.weather-icon p {
   font-size: 80px;
-  margin: 5px;
+  margin: 0px;
   text-align: center;
 }
 .weather-icon img {
   width: 80px;
   height: 80px;
   display: block;
+  margin: 0 auto;
 }
 
 header {
