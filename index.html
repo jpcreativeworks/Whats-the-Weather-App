@@ -17,8 +17,13 @@
       <p class="weather-icon">🌤️</p>
       <div class="weather-app-info">
         <header>
-          <form class="city-search">
-            <input type="search" placeholder="Enter a city..." required />
+          <form class="city-search" id="search-form">
+            <input
+              type="search"
+              id="search-input"
+              placeholder="Enter a city..."
+              required
+            />
             <input type="submit" value="Search" />
           </form>
         </header>
@@ -28,12 +33,12 @@
             <p class="current">Tuesday 14:14</p>
           </div>
           <div>
-            <h2 class="current-temp">
+            <h2 class="current-temp" id="temperature">
               48 <span class="current-temp-unit">°C</span>
             </h2>
           </div>
           <div>
-            <h2 class="city-info">Tucson, AZ, USA</h2>
+            <h2 class="city-info" id="city">Tucson</h2>
             <p class="weather-info">
               <strong>Sunny</strong><br />
               Humidity: <strong>10%</strong>, Wind: <strong>2mph</strong>
@@ -81,5 +86,7 @@
         </footer>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="src/script.js"></script>
   </body>
 </html>
