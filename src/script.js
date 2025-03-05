@@ -119,14 +119,10 @@ function displayForecast(response) {
       console.error(`Missing data for day ${i}`, forecast);
       continue;
     }
-    //let date = new Date(forecast.datetime);
     let dayIndex = (currentDayIndex + i) % 7;
     let dayName = daysOfWeek[dayIndex];
 
     let iconUrl = `https://www.weatherbit.io/static/img/icons/${forecast.weather.icon}.png`;
-    //"https://www.weatherbit.io/static/img/icons/" +
-    //forecast.weather.icon +
-    //".png";
     let temperature = Math.round(forecast.temp);
 
     let forecastHTML = `
@@ -136,34 +132,10 @@ function displayForecast(response) {
         <div class="forecast-temp">${temperature}°C</div>
       </div>
     `;
-    //"<div class='forecast-day'>" +
-    //"<div class='day'>" +
-    //dayName +
-    //"</div>" +
-    //"<img src='" +
-    //iconUrl +
-    //"' alt='Weather Icon' class='forecast-icon'>" +
-    //"<div class='forecast-temp'>" +
-    //temperature +
-    //"°C</div>" +
-    //"</div>";
 
     forecastContainer.innerHTML += forecastHTML;
-
-    //count++;
   }
 }
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
-//axios
-// .get(apiUrl)
-//  .then((response) => {
-//   console.log("weather data:", response.data);
-// })
-// .catch((error) => {
-//   console.error(
-//   "error fetching data",
-//   error.response ? error.response.data : error.message
-// );
-//  });

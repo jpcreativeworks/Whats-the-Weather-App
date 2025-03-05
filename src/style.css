@@ -104,9 +104,6 @@ main {
   font-weight: bold;
   text-align: center;
   display: inline-block;
-  /*display: flex;
-  align-items: center;
-  justify-content: center;*/
   margin: 5px 5px 5px 50px;
 }
 .current-temp-unit {
@@ -123,7 +120,7 @@ main {
 strong {
   color: rgba(255, 213, 0, 1);
 }
-/*.five-day-forecast,*/
+
 #forecast-container {
   display: flex;
   justify-content: space-evenly;
@@ -133,8 +130,7 @@ strong {
   padding: 5px;
   margin-top: 10px;
 }
-/*.five-day-forecast div,
-#forecast-container */
+
 .forecast-day {
   background: rgba(225, 225, 225, 0.2);
   padding: 10px;
@@ -146,12 +142,10 @@ strong {
 .day {
   color: rgba(255, 213, 0, 1);
 }
-/*#forecast-container*/
+
 .forecast-icon {
   width: 50px;
   height: 50px;
-  /*display: block;
-  margin: 5px auto;*/
 }
 footer {
   font-size: 14px;
