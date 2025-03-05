@@ -22,9 +22,32 @@ function displayWeather(response) {
   let weatherData = response.data.data[0];
   let city = weatherData.city_name;
   let temperature = Math.round(weatherData.temp);
+  let humidity = weatherData.rh;
+  let windSpeedKmh = weatherData.wind_spd * 3.6;
+  let windSpeedMph = Math.round(windSpeedKmh * 0.621371);
+  let weatherDescription = weatherData.weather.description;
+  let weatherIconCode = weatherData.weather.icon;
 
   document.querySelector("#city").innerHTML = city;
   document.querySelector("#temperature").innerHTML = `${temperature}`;
+  document.querySelector("#humidPercent").innerHTML = `${humidity}%`;
+  document.querySelector("#wind").innerHTML = `${windSpeedMph} mph`;
+  document.querySelector("#description").innerHTML = weatherDescription;
+
+  let iconContainer = document.querySelector("#weather-icon-container");
+
+  if (weatherIconCode) {
+    let oldIcon = document.querySelector(".weather-icon");
+    if (oldIcon) {
+      oldIcon.remove();
+    }
+
+    let iconElement = document.createElement("img");
+    iconElement.src = `https://www.weatherbit.io/static/img/icons/${weatherIconCode}.png`;
+    iconElement.alt = weatherDescription;
+    iconElement.classList.add("weather-icon");
+    iconContainer.appendChild(iconElement);
+  }
 }
 
 let searchForm = document.querySelector("#search-form");

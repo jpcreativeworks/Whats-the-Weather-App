@@ -13,7 +13,7 @@
     <title>What's the Weather?</title>
   </head>
   <body>
-    <div class="weather-app">
+    <div class="weather-app" id="weather-icon-container">
       <p class="weather-icon">🌤️</p>
       <div class="weather-app-info">
         <header>
@@ -33,15 +33,15 @@
             <p class="current">Tuesday 14:14</p>
           </div>
           <div>
-            <h2 class="current-temp" id="temperature">
-              48 <span class="current-temp-unit">°C</span>
-            </h2>
+            <h2 class="current-temp" id="temperature">48</h2>
+            <span class="current-temp-unit">°C</span>
           </div>
           <div>
             <h2 class="city-info" id="city">Tucson</h2>
             <p class="weather-info">
-              <strong>Sunny</strong><br />
-              Humidity: <strong>10%</strong>, Wind: <strong>2mph</strong>
+              <strong id="description">Sunny</strong><br />
+              Humidity: <strong id="humidPercent">10%</strong>, Wind:
+              <strong id="wind">2mph</strong>
             </p>
           </div>
 
