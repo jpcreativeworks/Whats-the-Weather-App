@@ -102,10 +102,12 @@ main {
 .current-temp {
   font-size: 100px;
   font-weight: bold;
-  display: flex;
+  text-align: center;
+  display: inline-block;
+  /*display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 5px;
+  justify-content: center;*/
+  margin: 5px 5px 5px 50px;
 }
 .current-temp-unit {
   font-size: 40px;
@@ -116,8 +118,11 @@ main {
 .weather-info {
   flex: 1;
   text-align: right;
+  margin: 5px 50px 5px 5px;
 }
-
+strong {
+  color: rgba(255, 213, 0, 1);
+}
 .five-day-forecast {
   display: flex;
   justify-content: space-evenly;

@@ -11,6 +11,46 @@ function search(event) {
   }
 }
 
+function formatDateTime() {
+  let now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let dayIndex = now.getDay();
+  let daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = daysOfWeek[dayIndex];
+  let amPm;
+  if (hours >= 12) {
+    amPm = "PM";
+  } else {
+    amPm = "AM";
+  }
+
+  if (hours === 0) {
+    hours = 12;
+  } else if (hours > 12) {
+    hours = hours % 12;
+  }
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let formattedTime = `${day} ${hours}:${minutes} ${amPm}`;
+  document.querySelector(".current").innerHTML = formattedTime;
+}
+
+formatDateTime();
+
+setInterval(formatDateTimeDateTime, 60000);
+
 function fetchWeather(city) {
   let apiKey = "e0906538bb594019bc3d31cbe5e89144";
   let apiUrl = `https://api.weatherbit.io/v2.0/current?city=${city}&key=${apiKey}`;
