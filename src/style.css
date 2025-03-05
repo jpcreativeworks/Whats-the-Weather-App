@@ -123,7 +123,8 @@ main {
 strong {
   color: rgba(255, 213, 0, 1);
 }
-.five-day-forecast {
+/*.five-day-forecast,*/
+#forecast-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -132,15 +133,25 @@ strong {
   padding: 5px;
   margin-top: 10px;
 }
-.five-day-forecast div {
+/*.five-day-forecast div,
+#forecast-container */
+.forecast-day {
   background: rgba(225, 225, 225, 0.2);
   padding: 10px;
   border-radius: 10px;
   flex: 1;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 .day {
   color: rgba(255, 213, 0, 1);
+}
+/*#forecast-container*/
+.forecast-icon {
+  width: 50px;
+  height: 50px;
+  /*display: block;
+  margin: 5px auto;*/
 }
 footer {
   font-size: 14px;
